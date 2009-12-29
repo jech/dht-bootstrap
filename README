@@ -5,6 +5,6 @@ maintains a window of the last 255 reachable nodes that it encounters.  It
 replies to find_nodes and get_peers requests with a random subset of the
 reachable window.
 
-Thanks to Alus for giving the initial idea.
+Thanks to Greg Hazel for the initial idea.
 
                                         Juliusz Chroboczek
