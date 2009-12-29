@@ -1,0 +1,10 @@
+Dht-bootstrap is an implementation of a bootstrap node for the BitTorrent
+(mainline) DHT.  Rather than maintaining a Kademlia routing table, it
+performs a partly random, partly breadth-first walk of the DHT, and
+maintains a window of the last 255 reachable nodes that it encounters.  It
+replies to find_nodes and get_peers requests with a random subset of the
+reachable window.
+
+Thanks to Alus for giving the initial idea.
+
+                                        Juliusz Chroboczek
