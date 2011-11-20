@@ -406,6 +406,15 @@ main(int argc, char **argv)
         }
     }
 
+    i = optind;
+
+    if(argc < i + 1)
+        goto usage;
+
+    port = atoi(argv[i++]);
+    if(port <= 0 || port >= 0x10000)
+        goto usage;
+
     if(ipv4) {
         dht_socket = socket(PF_INET, SOCK_DGRAM, 0);
         if(dht_socket < 0)
@@ -514,15 +523,6 @@ main(int argc, char **argv)
     if(!quiet)
         dht_debug = stdout;
     
-    i = optind;
-
-    if(argc < i + 1)
-        goto usage;
-
-    port = atoi(argv[i++]);
-    if(port <= 0 || port >= 0x10000)
-        goto usage;
-
     while(i < argc) {
         struct addrinfo hints, *info, *infop;
         memset(&hints, 0, sizeof(hints));
