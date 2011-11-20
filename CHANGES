@@ -1,3 +1,9 @@
+20 November 2011: dht-bootstrap-0.2
+
+  * Fixed a bug that could cause EAFNOSUPPORT errors.
+  * Fixed a bug that caused port numbers given on the command line to be
+    ignored.
+
 29 December 2009: dht-bootstrap-0.1
 
   * Initial public release.
