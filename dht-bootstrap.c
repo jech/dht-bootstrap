@@ -427,6 +427,7 @@ main(int argc, char **argv)
         struct sockaddr_in sin;
         int rc;
         memset(&sin, 0, sizeof(sin));
+        sin.sin_family = AF_INET;
         sin.sin_port = htons(port);
         rc = bind(dht_socket, (struct sockaddr*)&sin, sizeof(sin));
         if(rc < 0) {
@@ -464,6 +465,7 @@ main(int argc, char **argv)
            happens if the user used the -b flag. */
 
         memset(&sin6, 0, sizeof(sin6));
+        sin6.sin6_family = AF_INET6;
         sin6.sin6_port = htons(port);
         rc = bind(dht_socket6, (struct sockaddr*)&sin6, sizeof(sin6));
         if(rc < 0) {
