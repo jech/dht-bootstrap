@@ -470,8 +470,8 @@ main(int argc, char **argv)
         }
 
         /* BEP-32 mandates that we should bind this socket to one of our
-           global IPv6 addresses.  In this simple example, this only
-           happens if the user used the -b flag. */
+           global IPv6 addresses.  In this program, this only happens if
+           the user used the -b flag. */
 
         memset(&sin6, 0, sizeof(sin6));
         sin6.sin6_family = AF_INET6;
