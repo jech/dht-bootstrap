@@ -645,14 +645,6 @@ main(int argc, char **argv)
                 }
             }
 
-            if(want > 0) {
-                want4 = (want & WANT4);
-                want6 = (want & WANT6);
-            } else {
-                want4 = source->sa_family == AF_INET;
-                want6 = source->sa_family == AF_INET6;
-            }
-
             switch(message) {
             case REPLY:
                 if(tid_len != 4) {
