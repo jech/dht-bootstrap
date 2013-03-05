@@ -599,7 +599,7 @@ main(int argc, char **argv)
             unsigned short port;
             unsigned char values[2048], values6[2048];
             int values_len = 2048, values6_len = 2048;
-            int want, want4, want6;
+            int want;
             struct sockaddr_storage source_storage;
             struct sockaddr *source = (struct sockaddr*)&source_storage;
             socklen_t sourcelen = sizeof(source_storage);
