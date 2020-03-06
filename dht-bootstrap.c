@@ -993,7 +993,7 @@ send_error(struct sockaddr *sa, int salen,
 #undef ADD_V
 
 #ifndef HAVE_MEMMEM
-static void *
+void *
 memmem(const void *haystack, size_t haystacklen,
        const void *needle, size_t needlelen)
 {
